@@ -11,28 +11,31 @@
     function encrypt(str) {
         let encrypted_str = "";
         for (let i = 0; i < str.length; i++) {
-            const charCode = str.charCodeAt(i);
-            if (charCode < 64) {
-                encrypted_str += String.fromCharCode(charCode + 2);
+            if (str.charCodeAt(i) === 65 || str.charCodeAt(i) === 63 || str.charCodeAt(i) === 64) {
+                encrypted_str += String.fromCharCode(str.charCodeAt(i));
+            } else if (str.charCodeAt(i) < 64) {
+                encrypted_str += String.fromCharCode(str.charCodeAt(i) + 2);
             } else {
-                encrypted_str += String.fromCharCode(charCode - 2);
+                encrypted_str += String.fromCharCode(str.charCodeAt(i) - 2);
             }
         }
         return encrypted_str;
     }
-
+    
     function decrypt(str) {
         let decrypted_str = "";
         for (let i = 0; i < str.length; i++) {
-            const charCode = str.charCodeAt(i);
-            if (charCode < 64) {
-                decrypted_str += String.fromCharCode(charCode - 2);
+            if (str.charCodeAt(i) === 65 || str.charCodeAt(i) === 63 || str.charCodeAt(i) === 64) {
+                decrypted_str += String.fromCharCode(str.charCodeAt(i));
+            } else if (str.charCodeAt(i) < 64) {
+                decrypted_str += String.fromCharCode(str.charCodeAt(i) - 2);
             } else {
-                decrypted_str += String.fromCharCode(charCode + 2);
+                decrypted_str += String.fromCharCode(str.charCodeAt(i) + 2);
             }
         }
         return decrypted_str;
     }
+        
 
     optionSelect.addEventListener("change", function () {
         if (optionSelect.value === "Decryption") {
