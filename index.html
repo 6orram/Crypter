@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypter | Welcome to Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="crypter.png">
+</head>
+<body>
+
+    <div class="hero">
+        <p id="usageCount">0 use</p>
+        <button id="btn">ENCRYPT</button>
+        
+
+        <ul class="button">
+            <li class="row form">
+                <select id="method">
+                    <option value="Encryption">Encryption</option>
+                    <option value="Decryption">Decryption</option>
+                </select>
+                <div id="copyButton" class="copy-button">Copy</div>
+            </li>
+            
+        </ul>
+
+        <div class="groupy">
+            <div class="text-input">
+                <textarea id="input" spellcheck="false" class="from-text" placeholder="Enter text to Encrypt"></textarea>
+                <textarea id="output" spellcheck="false" readonly disabled class="to-text" placeholder="Encryption"></textarea>
+            </div>
+        </div>
+            
+            <p class="foot">Made By <a href="https://gorram.netlify.app/" style="color: orangered;" target="_blank">Gorram </a> &copy; All Rights Reserverd</p>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

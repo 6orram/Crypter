@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat',sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+}
+
+.hero{
+    max-width: 690px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+}
+
+.hero p{
+    font-size: 13px;
+}
+
+.hero button{
+    width: 30%;
+    padding: 14px;
+    border: none;
+    margin-top: 9px;
+    font-size: 17px;
+    background: #fff;
+    border-radius: 100px;
+    border: 2px solid #181818;
+    color: #181818;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero button:hover{
+    transition: .3s;
+    background: #181818;
+    color: #fff;
+}
+
+.hero .button{
+    padding: 12px 0;
+}
+
+.button , li , i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button .row select{
+    color: #333;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 2px solid #080808;
+    background: none;
+    cursor: pointer;
+}
+
+.groupy{
+    border: 2px solid #080808;
+    background: #fccaca;
+}
+
+.groupy .text-input{
+    display: flex;
+}
+
+.text-input .to-text{
+    border-left: 2px solid #080808;
+}
+
+.text-input textarea{
+    resize: none;
+    height: 100px;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.copy-button{
+    color: #333;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 2px solid #080808;
+    background: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.copy-button:hover{
+    color: #fff;
+    background: #080808;
+    transition: .3s;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .hero button {
+        width: 50%; /* Adjust button width for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .button .row select {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .text-input textarea {
+        height: 70px; /* Adjust height for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 6px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .copy-button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
